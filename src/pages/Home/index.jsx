@@ -2,6 +2,7 @@ import { useState } from "react";
 import bg from "../../assets/bg.jpeg";
 import { collection, addDoc, Timestamp } from "firebase/firestore";
 import { useFirebase } from "../../context/firebase";
+import { Link } from "react-router-dom";
 
 
 export default function Home() {
@@ -94,9 +95,25 @@ const handleSubmit = async (e) => {
             >
               Submit
             </button>
+            
           </div>
+         <div className="text-center mt-4">
+  <Link
+    to="/admin"
+    style={{
+      fontSize: 16,
+      color: "#000",
+      textDecoration: "underline",
+      fontWeight: "600",
+    }}
+  >
+    Go to Dashboard
+  </Link>
+</div>
         </form>
+         
       </section>
+      
     </div>
   );
 }
